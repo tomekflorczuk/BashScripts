@@ -1,11 +1,11 @@
 #!/bin/bash
 #a)
-#ps aux | awk '{print "User " $1 " -proces "$NF " (CPU:"$3 ", MEM:"$4 ")"}'
+ps aux | awk '{print "User " $1 " -proces "$NF " (CPU:"$3 ", MEM:"$4 ")"}'
 #b)
 ps aux | awk '{split($(NF-1),time,":"); \
 if (time[1] >= 1) print "User " $1 " -proces " $NF " (time: " $(NF-1) ")"}'
 #c)
-#ps aux | awk '
-#{sumcpu += $3; sumem += $4} 
-#END {print "Suma CPU:" sumcpu ", suma MEM:" sumem}
-#'
+ps aux | awk '
+{sumcpu += $3; sumem += $4} 
+END {print "Suma CPU:" sumcpu ", suma MEM:" sumem}
+'
