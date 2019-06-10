@@ -1,4 +1,6 @@
 #!/bin/bash
+#Operacje na drzewach katalogów, przetwarzanie potokowe (skrypty z wykorzystaniem FIND)
+
 #a
 find . -name "*test*" -type f -print | sort | tail -n 7
 #b
