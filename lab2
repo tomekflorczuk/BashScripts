@@ -1,4 +1,6 @@
 #!/bin/bash
+#Operacje na dowiązaniach symbolicznych (skrypty)
+
 #usuwanie lab3
 rm -fr lab3
 #tworzenie struktury
