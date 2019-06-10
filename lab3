@@ -1,0 +1,15 @@
+#!/bin/bash
+#a
+find . -name "*test*" -type f -print | sort | tail -n 7
+#b
+find . -name "*.jpg" -or -name "*.png" -type f -size +1k -print |
+while read var
+do
+	readlink -e $var
+done | 	tr '/' '\\' $var
+#3
+find ./a -cmin -1 -type f -print  | 
+while read var
+do
+	cp $var ./b
+done
