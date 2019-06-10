@@ -1,5 +1,10 @@
 #!/usr/bin/python
 
+#Łączenie w jeden wszystkich plików należących do zadanego katalogu (parametr wywołania
+#skryptu), o zadanym rozszerzeniu (drugi parametr skryptu). Kolejność, w jakiej pliki zostaną
+#połączone - nieistotna. Treść każdego pliku powinna być poprzedzona nagłówkiem z jego
+#nazwą.
+
 import sys;
 import os;
 
