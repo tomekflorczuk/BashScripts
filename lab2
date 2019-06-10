@@ -1,0 +1,29 @@
+#!/bin/bash
+#usuwanie lab3
+rm -fr lab3
+#tworzenie struktury
+mkdir -p lab3/a/b
+
+mkdir lab3/a/c
+echo "test1" >> lab3/a/c/p1
+chmod 755 lab3/a/c/p1
+
+mkdir lab3/d
+echo "test10" >> lab3/d/p10
+chmod 755 lab3/d/p10
+
+mkdir lab3/d/e
+for var in 20 21 22 23 24 25 26 27 28 29
+do
+	echo "test$var" >> lab3/d/e/p$var
+	chmod 755 lab3/d/e/p$var
+done
+#dowiazania
+ln -s ../../d/p10 lab3/a/b/link_p10
+ln -s ~/lab3/d/p10 /home/stud/tflorczu/lab3/a/b/link_p10_bez
+ln -s ../../d/e/p20 lab3/a/b/link_p20
+
+for var in 20 21 22 23 24 25 26 27 28 29
+do
+	ln -s /home/stud/tflorczu/lab3/d/e/p$var /home/stud/tflorczu/lab3/d/link_p${var}_bez
+done
